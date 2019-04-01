@@ -81,7 +81,7 @@ class textPredictor:
         self.model.fit(self.x_train, self.y_train,
                   batch_size=128,
                   epochs=1,
-                  verbose=1)
+                  verbose=2)
 
         # Stick my model in a JSON file
         # We will also need to save the weights
@@ -132,12 +132,13 @@ class textPredictor:
     ## loop training function that logs performance over many cycles
     def long_train(self, epocs):
         default_std_out = sys.stdout
-        log_file = open("nightlog.txt","a")
+        log_file = open("nightlog.txt", "a")
+        print("Begin login to output file...")
         sys.stdout = log_file
         for epoch in range(epocs):
                 print("Night " + str(epoch))
                 self.train()
-                file_name = "backups\season1_weights_night"+str(epoch)+".H5"
+                file_name = "backups\cartman_weights_night"+str(epoch)+".H5"
                 self.model.save_weights(file_name)
         sys.stdout = default_std_out
         log_file.close()
@@ -180,6 +181,7 @@ class textPredictor:
         seaborn.set_style('dark')
         seaborn.lineplot(x='Epochs', y='Losses', data=dataframe)
         pp.savefig('Night_Graph.png')
+
 
 
 
