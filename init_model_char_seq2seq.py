@@ -62,7 +62,21 @@ np.save('y_sample_weights', y)
 # Input shape = (40, uniquechars) ([particular sentence][what chars it has])
 print('Build model...')
 model = Sequential()
-model.add(LSTM(128, input_shape=(maxlen, len(chars))))
+
+# Add one LongShortTermMemory layer
+model.add(LSTM(128, return_sequences=True, input_shape=(maxlen, len(chars))))
+
+# Stick another layer (New test)
+# notes: seemed to improve my ability to get proper sentences
+# also heavily slowed processing time of predicting
+# slightly slowed processing time of learning
+model.add(LSTM(128))
+
+# I think i might be able to get away with a second
+# dense layer - the Rectifier (neural networks) layer
+model.add(Dense(128, activation='relu'))
+
+# Add a normilzation layer on the for the output
 model.add(Dense(len(chars), activation='softmax'))
 
 # LSTM = Long short term memory model type -> remembers stuff (nerds only) ??
@@ -80,9 +94,9 @@ optimizer = RMSprop(lr=0.01)
 # to classify into as we have chars (more than 2)
 model.compile(loss='categorical_crossentropy', optimizer=optimizer)
 
-model.fit(x, y,
-          batch_size=128,
-          epochs=1)
+#model.fit(x, y,
+          #batch_size=128,
+          #epochs=1)
 
 # Stick my model in a JSON file
 # We will also need to save the weights

@@ -1,11 +1,13 @@
 # Personal Additions
 .idea/
 backups/
+output
 season1_trained_model.json
 season1_weights.H5
 x_sample_weights.npy
 y_sample_weights.npy
-
+output_graphs/
+output_scripts/
 
 
 

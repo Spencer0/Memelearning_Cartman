@@ -71,8 +71,8 @@ class textPredictor:
         return np.argmax(probas)
 
     ## Function to improve model performance by calling .fit
-    ## Uses the training numpy arrays created in init_model.py
-    def train(self):
+    ## Uses the training numpy arrays created in init_model_char_seq2seq.py
+    def train(self, verbosity=1):
 
         # load the true sample weights for each character
         # Start training the data
@@ -81,7 +81,7 @@ class textPredictor:
         self.model.fit(self.x_train, self.y_train,
                   batch_size=128,
                   epochs=1,
-                  verbose=2)
+                  verbose=verbosity)
 
         # Stick my model in a JSON file
         # We will also need to save the weights
@@ -137,7 +137,7 @@ class textPredictor:
         sys.stdout = log_file
         for epoch in range(epocs):
                 print("Night " + str(epoch))
-                self.train()
+                self.train(verbosity=2)
                 file_name = "backups\cartman_weights_night"+str(epoch)+".H5"
                 self.model.save_weights(file_name)
         sys.stdout = default_std_out
@@ -174,20 +174,22 @@ class textPredictor:
             losses_found = re.findall(re_loss_grabber, lines)
 
         # Check data
-        nights = list(range(len(nights_found)))
+        nights = list(range(len(losses_found)))
         losses = list(map(float, losses_found))
         data = {'Epochs': nights, 'Losses': losses}
         dataframe = pandas.DataFrame(data)
-        seaborn.set_style('dark')
-        seaborn.lineplot(x='Epochs', y='Losses', data=dataframe)
-        pp.savefig('Night_Graph.png')
+        seaborn.set_style('darkgrid')
+        graph = seaborn.lineplot(x='Epochs', y='Losses', data=dataframe)
+        title = "Double layer LTSM + Double density (softmax, rectifier) - Cartman data - overnight"
+        graph.set_title(title)
+        pp.savefig(title+'.png')
 
 
 
 
 tp = textPredictor()
-tp.long_train(10)
+#tp.long_train(50)
 #tp.train()
-#tp.predictor()
-tp.plotlog()
+#tp.predictor(out_len=1500)
+#tp.plotlog()
 #tp.stats()

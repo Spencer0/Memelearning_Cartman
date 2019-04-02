@@ -1,0 +1,150 @@
+Night 0
+Epoch 1/1
+ - 335s - loss: 1.4432
+Night 1
+Epoch 1/1
+ - 325s - loss: 1.4085
+Night 2
+Epoch 1/1
+ - 317s - loss: 1.3767
+Night 3
+Epoch 1/1
+ - 317s - loss: 1.3462
+Night 4
+Epoch 1/1
+ - 316s - loss: 1.3165
+Night 5
+Epoch 1/1
+ - 316s - loss: 1.2878
+Night 6
+Epoch 1/1
+ - 316s - loss: 1.2592
+Night 7
+Epoch 1/1
+ - 316s - loss: 1.2321
+Night 8
+Epoch 1/1
+ - 316s - loss: 1.2052
+Night 9
+Epoch 1/1
+ - 317s - loss: 1.1790
+Night 10
+Epoch 1/1
+ - 315s - loss: 1.1541
+Night 11
+Epoch 1/1
+ - 316s - loss: 1.1302
+Night 12
+Epoch 1/1
+ - 315s - loss: 1.1044
+Night 13
+Epoch 1/1
+ - 316s - loss: 1.0830
+Night 14
+Epoch 1/1
+ - 316s - loss: 1.0598
+Night 15
+Epoch 1/1
+ - 316s - loss: 1.0398
+Night 16
+Epoch 1/1
+ - 316s - loss: 1.0165
+Night 17
+Epoch 1/1
+ - 316s - loss: 0.9995
+Night 18
+Epoch 1/1
+ - 316s - loss: 0.9776
+Night 19
+Epoch 1/1
+ - 316s - loss: 0.9603
+Night 20
+Epoch 1/1
+ - 316s - loss: 0.9411
+Night 21
+Epoch 1/1
+ - 315s - loss: 0.9225
+Night 22
+Epoch 1/1
+ - 316s - loss: 0.9056
+Night 23
+Epoch 1/1
+ - 316s - loss: 0.8914
+Night 24
+Epoch 1/1
+ - 316s - loss: 0.8734
+Night 25
+Epoch 1/1
+ - 315s - loss: 0.8594
+Night 26
+Epoch 1/1
+ - 315s - loss: 0.8466
+Night 27
+Epoch 1/1
+ - 315s - loss: 0.8313
+Night 28
+Epoch 1/1
+ - 316s - loss: 0.8181
+Night 29
+Epoch 1/1
+ - 316s - loss: 0.8061
+Night 30
+Epoch 1/1
+ - 316s - loss: 0.7941
+Night 31
+Epoch 1/1
+ - 316s - loss: 0.7839
+Night 32
+Epoch 1/1
+ - 316s - loss: 0.7711
+Night 33
+Epoch 1/1
+ - 315s - loss: 0.7622
+Night 34
+Epoch 1/1
+ - 316s - loss: 0.7528
+Night 35
+Epoch 1/1
+ - 316s - loss: 0.7414
+Night 36
+Epoch 1/1
+ - 316s - loss: 0.7356
+Night 37
+Epoch 1/1
+ - 316s - loss: 0.7228
+Night 38
+Epoch 1/1
+ - 315s - loss: 0.7170
+Night 39
+Epoch 1/1
+ - 315s - loss: 0.7082
+Night 40
+Epoch 1/1
+ - 316s - loss: 0.7014
+Night 41
+Epoch 1/1
+ - 316s - loss: 0.6917
+Night 42
+Epoch 1/1
+ - 316s - loss: 0.6873
+Night 43
+Epoch 1/1
+ - 316s - loss: 0.6792
+Night 44
+Epoch 1/1
+ - 316s - loss: 0.6747
+Night 45
+Epoch 1/1
+ - 316s - loss: 0.6666
+Night 46
+Epoch 1/1
+ - 316s - loss: 0.6586
+Night 47
+Epoch 1/1
+ - 316s - loss: 0.6535
+Night 48
+Epoch 1/1
+ - 316s - loss: 0.6492
+Night 49
+Epoch 1/1
+ - 315s - loss: 0.6441
